@@ -44,11 +44,11 @@ def count_items(arr):
 
 # Вычислисть максимальное значение в списке
 def max_value(arr):
-    m = arr[0]
-    if len(arr) == 1:
-        return m
+    maximum = arr[0]
+    if len(arr) < 2:
+        return maximum
     else:
-        new_arr = [i for i in arr if i > m]
+        new_arr = [i for i in arr if i > maximum]
         return max_value(new_arr)
 
 
