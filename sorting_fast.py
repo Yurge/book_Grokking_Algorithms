@@ -2,7 +2,8 @@ def fast_sort(arr):
     if len(arr) < 2:
         return arr
     else:
-        target = arr[0]
+        mid_ind = len(arr) // 2
+        target = arr[mid_ind]
         less = [num for num in arr if num < target]
         more = [num for num in arr if num > target]
         return fast_sort(less) + [target] + fast_sort(more)
